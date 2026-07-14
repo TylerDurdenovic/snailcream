@@ -33,9 +33,9 @@ SQLite files don't work on Vercel's serverless filesystem, so the app uses Postg
    to the project — this adds `DATABASE_URL` to the project's environment variables
    (use the **direct/unpooled** connection string).
 2. Add `AUTH_SECRET` in **Settings → Environment Variables** (long random string).
-3. Redeploy. The build runs `prisma db push` automatically, creating the tables.
-4. Seed the admin account once from your machine: put the same `DATABASE_URL` in your
-   local `.env` and run `npm run db:seed`.
+3. Create the tables and seed the admin once from your machine: put the same
+   `DATABASE_URL` in your local `.env` and run `npm run setup`.
+4. Redeploy.
 
 ## .env
 
