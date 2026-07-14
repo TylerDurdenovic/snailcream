@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0fdf4"/>
+      <stop offset="1" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="boxTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" rx="32" fill="url(#bg2)"/>
+  <ellipse cx="240" cy="420" rx="180" ry="16" fill="#065f46" opacity="0.10"/>
+
+  <!-- five stacked/fanned boxes -->
+  <g>
+    <g transform="translate(60 300) rotate(-8)">
+      <rect width="130" height="86" rx="10" fill="#ffffff" stroke="#c9dcd2" stroke-width="2"/>
+      <rect width="130" height="26" rx="10" fill="url(#boxTop)"/>
+      <text x="65" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#065f46">SNAILCREAM</text>
+      <text x="65" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#77948a">10 g · Made in Germany</text>
+    </g>
+    <g transform="translate(180 312) rotate(4)">
+      <rect width="130" height="86" rx="10" fill="#ffffff" stroke="#c9dcd2" stroke-width="2"/>
+      <rect width="130" height="26" rx="10" fill="url(#boxTop)"/>
+      <text x="65" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#065f46">SNAILCREAM</text>
+      <text x="65" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#77948a">10 g · Made in Germany</text>
+    </g>
+    <g transform="translate(300 298) rotate(-3)">
+      <rect width="130" height="86" rx="10" fill="#ffffff" stroke="#c9dcd2" stroke-width="2"/>
+      <rect width="130" height="26" rx="10" fill="url(#boxTop)"/>
+      <text x="65" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#065f46">SNAILCREAM</text>
+      <text x="65" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#77948a">10 g · Made in Germany</text>
+    </g>
+    <g transform="translate(120 186) rotate(5)">
+      <rect width="130" height="86" rx="10" fill="#ffffff" stroke="#c9dcd2" stroke-width="2"/>
+      <rect width="130" height="26" rx="10" fill="url(#boxTop)"/>
+      <text x="65" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#065f46">SNAILCREAM</text>
+      <text x="65" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#77948a">10 g · Made in Germany</text>
+    </g>
+    <g transform="translate(248 176) rotate(-6)">
+      <rect width="130" height="86" rx="10" fill="#ffffff" stroke="#c9dcd2" stroke-width="2"/>
+      <rect width="130" height="26" rx="10" fill="url(#boxTop)"/>
+      <text x="65" y="66" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#065f46">SNAILCREAM</text>
+      <text x="65" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#77948a">10 g · Made in Germany</text>
+    </g>
+  </g>
+
+  <!-- price flag -->
+  <g transform="translate(330 74)">
+    <circle r="52" fill="#065f46"/>
+    <text y="-4" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#ffffff">€15</text>
+    <text y="18" text-anchor="middle" font-family="Arial" font-size="12" fill="#a7f3d0">5 × 10 g set</text>
+  </g>
+
+  <text x="88" y="92" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#065f46">The Set</text>
+  <text x="88" y="116" font-family="Arial" font-size="14" fill="#4b6358">Five boxes. One glow.</text>
+</svg>
