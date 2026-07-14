@@ -3,7 +3,7 @@
 Small e-commerce site for premium snail mucin cream, made in Germany.
 **€15 for a set of 5 boxes × 10g.**
 
-Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · Prisma 6 + SQLite**.
+Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · Prisma 6 + PostgreSQL**.
 
 ## Features
 
@@ -21,15 +21,27 @@ Built with **Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4
 ```bash
 npm install
 cp .env.example .env   # then edit values (see below)
-npm run setup          # creates the SQLite DB and seeds the admin (+ demo data)
+npm run setup          # syncs the DB schema and seeds the admin (+ demo data)
 npm run dev            # http://localhost:3000
 ```
+
+## Deploying on Vercel
+
+SQLite files don't work on Vercel's serverless filesystem, so the app uses PostgreSQL:
+
+1. In your Vercel project: **Storage → Create Database → Neon (Postgres)** and connect it
+   to the project — this adds `DATABASE_URL` to the project's environment variables
+   (use the **direct/unpooled** connection string).
+2. Add `AUTH_SECRET` in **Settings → Environment Variables** (long random string).
+3. Redeploy. The build runs `prisma db push` automatically, creating the tables.
+4. Seed the admin account once from your machine: put the same `DATABASE_URL` in your
+   local `.env` and run `npm run db:seed`.
 
 ## .env
 
 | Variable         | Description                                                          |
 | ---------------- | -------------------------------------------------------------------- |
-| `DATABASE_URL`   | SQLite file, keep `file:./dev.db`                                     |
+| `DATABASE_URL`   | PostgreSQL connection string (Neon/Supabase/any Postgres)             |
 | `AUTH_SECRET`    | Long random string used to sign session tokens — generate with `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` |
 | `ADMIN_USERNAME` | Username for the seeded admin account                                 |
 | `ADMIN_EMAIL`    | Email for the seeded admin account (used to log in)                   |
