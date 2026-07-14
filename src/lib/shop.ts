@@ -20,6 +20,14 @@ export const ORDER_STATUSES = [
   "CANCELLED",
 ] as const;
 
+// Statuses that mean the customer's payment has actually been received.
+// A payment confirmation only asserts "paid" for orders in one of these.
+const PAID_STATUSES = new Set(["PAID", "SHIPPED", "DELIVERED"]);
+
+export function isPaid(status: string): boolean {
+  return PAID_STATUSES.has(status);
+}
+
 export function paymentLabel(value: string): string {
   return PAYMENT_METHODS.find((m) => m.value === value)?.label ?? value;
 }
